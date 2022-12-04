@@ -6,7 +6,7 @@ m2 = 20;        %[kg]
 m3 = 20;        %[kg]
 g = 9.81;       %[m/(s^2)]
 %% sim
-t_stop = 20;
+t_stop = 5;
 %% regulator PD
 Kp = 2000;
 Kd = 200;
@@ -21,28 +21,28 @@ q3p_0 = 0;
 %% init conditions trajectory generator
 q1d_0 = 0; % q1d = 2sin(t/2)
 q2d_0 = 2; % q2d = 2cos(t)
-q3d_0 = 0; % q3d = 2sin(t)
+q3d_0 = 0; % q3d = sin(2t)
 
 
 
 %% simulink model
 [t] = sim("RTR_sim2021a.slx");
 %% plot e(t)
-% figure(1); grid on; 
-% plot(t.t, t.e1,'r', linewidth=1.5);
-% xlabel('$t$', 'interpreter', 'latex',fontsize=14);
-% ylabel('$e_1(t)$', 'interpreter', 'latex',fontsize=14);
-% title('Zmiana $e_1$ w czasie', 'interpreter', 'latex', fontsize=16);
-% figure(2); grid on;
-% plot(t.t, t.e2,'r', linewidth=1.5);
-% xlabel('$t$', 'interpreter', 'latex',fontsize=14);
-% ylabel('$e_2(t)$', 'interpreter', 'latex',fontsize=14);
-% title('Zmiana $e_2$ w czasie',fontsize=16);
-% figure(3); grid on;
-% plot(t.t, t.e3,'r', linewidth=1.5);
-% xlabel('$t$', 'interpreter', 'latex',fontsize=14);
-% ylabel('$e_3(t)$',fontsize=14);
-% title('Zmiana $e_3$ w czasie', 'interpreter', 'latex',fontsize=16);
+figure(1); grid on; 
+plot(t.t, t.e1,'r', linewidth=1.5);
+xlabel('$t$', 'interpreter', 'latex',fontsize=14);
+ylabel('$e_1(t)$', 'interpreter', 'latex',fontsize=14);
+title('Zmiana $e_1$ w czasie', 'interpreter', 'latex', fontsize=16);
+figure(2); grid on;
+plot(t.t, t.e2,'r', linewidth=1.5);
+xlabel('$t$', 'interpreter', 'latex',fontsize=14);
+ylabel('$e_2(t)$', 'interpreter', 'latex',fontsize=14);
+title('Zmiana $e_2$ w czasie',fontsize=16);
+figure(3); grid on;
+plot(t.t, t.e3,'r', linewidth=1.5);
+xlabel('$t$', 'interpreter', 'latex',fontsize=14);
+ylabel('$e_3(t)$',fontsize=14);
+title('Zmiana $e_3$ w czasie', 'interpreter', 'latex',fontsize=16);
 
 %% plot ep(t)
 % figure(4); grid on; 
