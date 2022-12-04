@@ -47,9 +47,10 @@ q3d_0 = 0; % q3d = 2sin(t)
 %% plot ep(t)
 % figure(4); grid on; 
 % xlabel('$t$', 'interpreter', 'latex',fontsize=16);
+% plot(t.t, t.e1p,'r', linewidth=1.5);
 % ylabel('$\dot{e}_1(t)$', 'interpreter', 'latex',fontsize=16);
 % title('Zmiana $\dot{e}_1$ w czasie', 'interpreter', 'latex', fontsize=16);
-% plot(t.t, t.e1p,'r', linewidth=1.5);
+% tit = "\dot{e}_1(t)";
 
 % figure(5); grid on;
 % xlabel('$t$', 'interpreter', 'latex',fontsize=16);
@@ -61,5 +62,6 @@ q3d_0 = 0; % q3d = 2sin(t)
 % xlabel('$t$', 'interpreter', 'latex',fontsize=16);
 % ylabel('$\dot{e}_3(t)$', 'interpreter', 'latex',fontsize=16);
 % title('Zmiana $\dot{e}_3$ w czasie', 'interpreter', 'latex',fontsize=16);
+
 % plot(t.t, t.e3p,'r', linewidth=1.5);
 
