@@ -2,4 +2,6 @@
 *.slxc
 sljpr/*
 sljpr
+slprj/
+slprj/*
 *.pdf
