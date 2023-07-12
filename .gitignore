@@ -4,4 +4,6 @@ sljpr/*
 sljpr
 slprj/*
 slprj
+symbolic/
+symbolic/*
 *.pdf
