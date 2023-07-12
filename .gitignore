@@ -2,6 +2,8 @@
 *.slxc
 sljpr/*
 sljpr
-slprj/
 slprj/*
+slprj
+symbolic/
+symbolic/*
 *.pdf
