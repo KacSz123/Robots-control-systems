@@ -6,4 +6,5 @@ slprj/*
 slprj
 symbolic/
 symbolic/*
-*.pdf
+# *.pdf
+.gitignore
